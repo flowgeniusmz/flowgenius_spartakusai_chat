@@ -1,0 +1,15 @@
+streamlit
+openai
+pandas
+requests
+pydantic
+tavily-python
+simple_salesforce
+supabase
+googlemaps
+beautifulsoup4
+temp
+google-api-python-client
+pandas
+googlesearch-python
+streamlit-extras
