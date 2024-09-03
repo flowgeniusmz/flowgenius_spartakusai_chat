@@ -1,5 +1,5 @@
 import streamlit as st
-from classes import clsSessionState as ss, clsBusinessResarch as br, clsEmails as em, clsAccount as ac
+from classes import clsSessionState as ss, clsBusinessResearch as br, clsEmails as em, clsAccount as ac
 from typing import Literal
 import time
 
