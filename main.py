@@ -1,7 +1,6 @@
 import streamlit as st
 from classes import clsSessionState as ss, clsBusinessResearch as br, clsEmails as em, clsAccount as ac
-from typing import Literal
-import time
+
 
 ## PAGE SETUP
 st.set_page_config(page_title="SpartakusAI", page_icon="assets/images/icon.png", layout="wide", initial_sidebar_state="collapsed")
@@ -29,10 +28,6 @@ def callback(question: str, response: str, key: str):
     append_to_messages(question=question, response=response)
     store_value(key)
     next_step()
-
-
-## QUESTIONS
-#questions = ["Are you here to buy insurance?", "Great - what type of insurance are you looking for?", "What is the reason you are purchasing insurance?", "What date do you need the insurance to be effective?", "What is the name of your business?", "Please wait while we research your business", "Please confirm the following information", "Great! Please provide an email address and password to create your account.", "All your information has been submitted! Someone will be in touch with you shortly."]
 
 def question1():
     question = "Are you here to buy insurance?"
@@ -188,6 +183,7 @@ def get_question(step: int):
         ac.Account()
         question9()
         em.WelcomeEmail()
+        st.session_state.clear
 
 ## DISPLAY SETUP
 chat_container = st.empty()
