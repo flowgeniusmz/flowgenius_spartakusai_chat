@@ -29,6 +29,12 @@ def callback(question: str, response: str, key: str):
     store_value(key)
     next_step()
 
+def restart():
+    resetbtn = st.button("Start Over")
+    if resetbtn:
+        st.session_state.clear()
+        st.rerun()
+
 def question1():
     question = "Are you here to buy insurance?"
     options = ["Yes", "No"]
