@@ -161,7 +161,7 @@ def question9():
     wid_key = ""
     with st.chat_message("assistant"):
         st.success(question)
-        em.WelcomeEmail()
+        
     
   
   
@@ -187,6 +187,7 @@ def get_question(step: int):
     elif step == 9: 
         ac.Account()
         question9()
+        em.WelcomeEmail()
 
 ## DISPLAY SETUP
 chat_container = st.empty()
