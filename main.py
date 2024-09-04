@@ -1,9 +1,10 @@
 import streamlit as st
 import utils as u
-import sessionstate as ss
+# import sessionstate as ss
 import tools as t
 import app as a
 import database as d
+import ss
 
 
 # Set page config
@@ -13,7 +14,7 @@ st.set_page_config(page_title="SpartakusAI", page_icon="assets/images/icon.png",
 u.page_setup()
 
 # Set Session State
-ss.SessionState().get()
+ss.initialize_session_state()
 
 # Set Containers
 chat_placeholder = st.empty()
