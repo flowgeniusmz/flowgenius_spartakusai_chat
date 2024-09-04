@@ -114,6 +114,7 @@ class Questions:
                 business_phone = st.text_input(label="Business Phone", key="_business_phone", value=st.session_state.business_phone)
                 business_website = st.text_input(label="Business Website", key="_business_website", value=st.session_state.business_website)
                 widget = {"business_email": business_email, "business_phone": business_phone,"business_address": business_address,"business_website": business_website,"business_owners": business_owners,"formation_date": formation_date}
+                st.session_state._business_research = f"{widget}"
                 submitbtn = st.button(label="Next", key="submit6", on_click=self.callback, args=[question, widget, ss_key])
 
     def question7(self):
