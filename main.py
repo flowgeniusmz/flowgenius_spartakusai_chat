@@ -17,12 +17,6 @@ u.page_setup()
 ss.initialize_session_state()
 
 
-hide_streamlit_style = """
-            <style>
-            footer {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
 # Set Containers
 main_container = st.container(height=600, border=False)
