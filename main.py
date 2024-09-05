@@ -17,8 +17,10 @@ u.page_setup()
 ss.initialize_session_state()
 
 # Set Containers
-chat_placeholder = st.empty()
-widget_container = st.container(border=True)
+main_container = st.container(height=600, border=False)
+with main_container:
+    chat_placeholder = st.empty()
+    widget_container = st.container(border=False)
 
 if st.session_state.step == 1:
     with widget_container:
@@ -29,7 +31,7 @@ elif st.session_state.step == 9:
     d.Account()
     u.restart_chat()
 else:
-    chat_container = chat_placeholder.container(height=400, border=True)
+    chat_container = chat_placeholder.container( height=300,border=False)
     with chat_container:
         for message in st.session_state.messages:
             with st.chat_message(message['role']):
