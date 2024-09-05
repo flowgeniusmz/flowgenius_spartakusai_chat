@@ -5,6 +5,7 @@ import tools as t
 import app as a
 import database as d
 import ss
+import footer as f
 
 
 # Set page config
@@ -42,3 +43,4 @@ else:
         a.Questions().get_question()
 
 
+f.get_footer()
