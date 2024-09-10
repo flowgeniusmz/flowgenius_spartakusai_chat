@@ -125,8 +125,8 @@ class WelcomeEmail:
         self.accept = "*/*"
         #self.username = st.session_state.username
         #self.password = st.session_state.password
-        self.username = "michael.zozulia@almalasers.com"
-        self.password = "EveryQuinn"
+        self.username = st.session_state.username
+        self.password = st.session_state.password
         self.payload = {"username": self.username, "password": self.password}
 
     def send_request(self):
